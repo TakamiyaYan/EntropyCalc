@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:layout_marginTop="0sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:layout_gravity="center"
+        android:text="信息熵计算"
+        android:textStyle="bold"
+        android:layout_marginBottom="50sp" />
+
+    <!-- 输入提示 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请输入数值（用逗号分隔）：" />
+
+    <!-- 输入框 -->
+    <EditText
+        android:id="@+id/inputValues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="例如：0.1, 0.3, 0.6"
+        android:inputType="text"
+        android:padding="16dp"
+        android:minHeight="48dp"
+        android:layout_marginBottom="50sp" />
+
+    <!-- 选择对数底 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请选择对数的底：" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/logBase2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Log₂"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/logBaseE"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Logₑ"/>
+
+        <RadioButton
+            android:id="@+id/logBase10"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Log₁₀"/>
+    </RadioGroup>
+
+    <!-- 计算按钮 -->
+    <Button
+        android:layout_marginTop="50sp"
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="计算"
+        android:layout_marginBottom="50dp"/>
+
+    <!-- 结果显示 -->
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="信息熵结果："
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingTop="16dp"/>
+</LinearLayout>
