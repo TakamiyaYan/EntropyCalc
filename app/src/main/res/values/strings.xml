@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">EntropyCalc</string>
+    <string name="app_name">信息熵计算器</string>
+    <string name="entropy_title">信息熵计算</string>
+    <string name="input_prompt">请输入数值（用逗号分隔）：</string>
+    <string name="input_hint">例如：0.1, 0.3, 0.6</string>
+    <string name="select_log_base">请选择对数的底：</string>
+    <string name="log_base_2">Log₂</string>
+    <string name="log_base_e">Logₑ</string>
+    <string name="log_base_10">Log₁₀</string>
+    <string name="calculate">计算</string>
+    <string name="result_text">信息熵结果：</string>
 </resources>

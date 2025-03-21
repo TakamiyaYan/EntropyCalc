@@ -2,89 +2,89 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="32dp"
-    android:gravity="center_vertical">
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_marginTop="0sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="32sp"
-        android:layout_gravity="center"
-        android:text="信息熵计算"
-        android:textStyle="bold"
-        android:layout_marginBottom="50sp" />
-
-    <!-- 输入提示 -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="请输入数值（用逗号分隔）：" />
-
-    <!-- 输入框 -->
-    <EditText
-        android:id="@+id/inputValues"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="例如：0.1, 0.3, 0.6"
-        android:inputType="text"
-        android:padding="16dp"
-        android:minHeight="48dp"
-        android:layout_marginBottom="50sp" />
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme" />
 
-    <!-- 选择对数底 -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="请选择对数的底：" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:padding="32dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
 
-        <RadioButton
-            android:id="@+id/logBase2"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Log₂"
-            android:checked="true"/>
+            android:text="@string/input_prompt" />
 
-        <RadioButton
-            android:id="@+id/logBaseE"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+        <EditText
+            android:id="@+id/inputValues"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Logₑ"/>
+            android:hint="@string/input_hint"
+            android:inputType="text"
+            android:padding="16dp"
+            android:minHeight="48dp"
+            android:layout_marginBottom="56dp"/>
 
-        <RadioButton
-            android:id="@+id/logBase10"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Log₁₀"/>
-    </RadioGroup>
+            android:text="@string/select_log_base" />
 
-    <!-- 计算按钮 -->
-    <Button
-        android:layout_marginTop="50sp"
-        android:id="@+id/calculateButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="计算"
-        android:layout_marginBottom="50dp"/>
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="16dp">
 
-    <!-- 结果显示 -->
-    <TextView
-        android:id="@+id/resultText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="信息熵结果："
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:paddingTop="16dp"/>
+            <RadioButton
+                android:id="@+id/logBase2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/log_base_2"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/logBaseE"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/log_base_e"/>
+
+            <RadioButton
+                android:id="@+id/logBase10"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/log_base_10"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="112dp"
+            android:layout_height="70dp"
+            android:text="@string/calculate"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="112dp"
+            android:layout_marginBottom="56dp"/>
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/result_text"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 </LinearLayout>
